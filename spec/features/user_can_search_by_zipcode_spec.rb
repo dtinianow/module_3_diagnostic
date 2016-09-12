@@ -6,8 +6,8 @@ RSpec.feature "Visitor can search by zipcode" do
     # When I visit "/"
     visit root_path
 
-    within('#q') do
-      fill_in {with: 80203}
+    within('.search-field') do
+      fill_in "q", with: "80203"
       # And I fill in the search form with 80203
       # And I click "Locate"
       click_on "Locate"
@@ -16,7 +16,6 @@ RSpec.feature "Visitor can search by zipcode" do
     expect(current_path).to eq "/search"
 
     expect(page).to have_content "Electric"
-    expect(page).to have_content "Propane"
     expect(page).to have_content "Propane"
     expect(page).to have_content "Name"
     expect(page).to have_content "Address"
