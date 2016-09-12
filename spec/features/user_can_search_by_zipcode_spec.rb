@@ -7,7 +7,7 @@ RSpec.feature "Visitor can search by zipcode" do
     visit root_path
 
     within('#q') do
-      fill_in "80203"
+      fill_in {with: 80203}
       # And I fill in the search form with 80203
       # And I click "Locate"
       click_on "Locate"
