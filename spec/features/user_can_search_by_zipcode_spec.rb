@@ -25,38 +25,6 @@ RSpec.feature "Visitor can search by zipcode" do
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
     # And the stations should be limited to Electric and Propane
     # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
-
-
-    # stub_omniauth
-    # user = User.create(
-    #   uid: "1234",
-    #   provider: "github",
-    #   username: "dtinianow",
-    #   name: "David Tinianow",
-    #   token: ENV["GITHUB_TOKEN"]
-    # )
-    # visit root_path
-    # click_on "Login"
-    # visit user_path(user)
-    #
-    # within(".navbar") do
-    #   expect(page).to have_content("Logout")
-    # end
-    #
-    # within(".username") do
-    #   expect(page).to have_content("David")
-    # end
-    #
-    # within(".user-full-name") do
-    #   expect(page).to have_content("dtinianow")
-    # end
-    #
-    # within(".github-categories") do
-    #   expect(page).to have_content("My Repositories")
-    #   expect(page).to have_content("My Organizations")
-    #   expect(page).to have_content("Recent Activity of People I Follow")
-    #   expect(page).to have_content("My Recent Activity")
-    # end
   end
 end
 

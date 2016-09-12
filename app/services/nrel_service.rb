@@ -4,12 +4,9 @@ class NrelService
     @_conn = Faraday.new("http://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=#{location}&radius=6.0&fuel_type=ELEC,LPG&api_key=#{ENV['nrel_token']}")
   end
 
-  def stations
+  def get_stations
     response = conn.get
-    stations = JSON.parse(response.body, symbolize_name: true, object_class: OpenStruct)
-    stations.map do |station|
-      Station.new(station)
-    end
+    JSON.parse(response.body, symbolize_name: true, object_class: OpenStruct)
   end
 
   private
