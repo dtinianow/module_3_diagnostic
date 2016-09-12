@@ -5,6 +5,5 @@ class SearchController < ApplicationController
     response = connection.get
     locations = JSON.parse(response.body, symbolize_name: true, object_class: OpenStruct)
     @stations = Station.generate_stations(locations)
-    # require "pry"; binding.pry
   end
 end
