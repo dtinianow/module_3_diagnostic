@@ -10,4 +10,11 @@ class Station < OpenStruct
       Station.new(station)
     end
   end
+
+  def self.generate_stations(stations)
+    stations.map do |station|
+      Station.new(station)
+    end
+    stations
+  end
 end

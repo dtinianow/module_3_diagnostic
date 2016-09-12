@@ -15,8 +15,7 @@ RSpec.feature "Visitor can search by zipcode" do
     # Then I should be on page "/search" with parameters visible in the url
     expect(current_path).to eq "/search"
 
-    expect(page).to have_content "Electric"
-    expect(page).to have_content "Propane"
+    expect(page).to have_content "Electric and Propane Locations"
     expect(page).to have_content "Name"
     expect(page).to have_content "Address"
     expect(page).to have_content "Fuel Types"
